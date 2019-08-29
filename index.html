@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Ejercicio Bootcamp</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body onload="fetchIssues()">
+  <div class="container">
+      <div class="jumbotron">
+          <h3>Add new issue:</h3>
+          <form onsubmit="saveIssue(event)">
+              <div class="form-group">
+                <label for="description">Description</label>
+                <input type="text" class="form-control" id="description" placeholder="Describe the issue">
+              </div>
+              <div class="form-group">
+                  <label for="severity">Severity</label>
+                  <select class="form-control" id="severity">
+                    <option value="Low">Low</option>
+                    <option value="Medium">Medium</option>
+                    <option value="High">High</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                    <label for="assignedTo">Assigned To</label>
+                    <input type="text" class="form-control" id="assignedTo" placeholder="Enter responsible">
+                </div>
+              <button type="submit" class="btn btn-primary">Add</button>
+            </form>
+        </div>
+
+        <div id="list">
+          <!-- <div class="card">
+            <div class="card-body">
+              <h6 class="card-subtitle mb-2 text-muted">Issue ID: ada98...</h6>
+              <span class="badge badge-primary">Open</span>
+              <h5 class="card-title">Aprender Git</h5>
+              <p class="card-text" ><i class="fas fa-cog"></i> High</p>
+              <p class="card-text"><i class="far fa-user"></i> Alejandro</p>
+              <div>
+              </div>
+              <a href="#" class="btn btn-info">Close</a>
+              <a href="#" class="btn btn-danger">Delete</a>
+            </div>
+          </div>  -->
+        </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chance/1.0.18/chance.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
